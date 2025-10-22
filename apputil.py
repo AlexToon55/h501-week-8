@@ -55,8 +55,8 @@ class MarkovText(object):
         if seed_term is None:
             seed_term = np.random.choice(list(self.term_dict.keys()))
 
-            out = [seed_term]
-            cur = seed_term
+        out = [seed_term]
+        cur = seed_term
 
         for _ in range(term_count - 1):
             followers = self.term_dict.get(cur, [])
